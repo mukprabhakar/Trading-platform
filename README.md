@@ -56,86 +56,9 @@ Welcome to our comprehensive Crypto Trading Platform! This platform leverages ad
 - **Gemini API:** Provides real-time data for cryptocurrency.
 - **CoinGecko API:** Another source for real-time cryptocurrency data.
 
-## Getting Started
+## Database Schema
 
-### Prerequisites
-- **Java Development Kit (JDK)**
-- **Node.js and npm**
-- **MySQL Server**
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/crypto-trading-platform.git
-   ```
-
-2. **Backend Setup:**
-   - Navigate to the backend directory:
-     ```bash
-     cd backend
-     ```
-   - Configure MySQL database in `application.properties`:
-     ```properties
-     spring.datasource.url=jdbc:mysql://localhost:3306/crypto_db
-     spring.datasource.username=root
-     spring.datasource.password=yourpassword
-     ```
-   - Build and run the backend:
-     ```bash
-     ./mvnw spring-boot:run
-     ```
-
-3. **Frontend Setup:**
-   - Navigate to the frontend directory:
-     ```bash
-     cd frontend
-     ```
-   - Install dependencies:
-     ```bash
-     npm install
-     ```
-   - Start the frontend:
-     ```bash
-     npm start
-     ```
-
-### Usage
-
-- **Access the platform:** Open your browser and navigate to `http://localhost:3000`.
-- **Register/Login:** Create a new account or log in with existing credentials.
-- **Explore Features:** Use the AI Chat Bot, buy and sell cryptocurrencies, manage your portfolio, and utilize advanced wallet functionalities.
-
-## Contributing
-
-We welcome contributions to enhance the platform. Please follow these steps to contribute:
-
-1. **Fork the repository.**
-2. **Create a new branch:**
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-3. **Make your changes and commit them:**
-   ```bash
-   git commit -m "Add your message"
-   ```
-4. **Push to the branch:**
-   ```bash
-   git push origin feature/your-feature
-   ```
-5. **Create a pull request.**
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For any queries or support, please contact:
-
-- **Email:** mukesh.mmp1234@gmail.com
-
-## ER Daigram
+```
 +---------------------+           +-----------------+
 |       Users         |<--------->|    Wallets      |
 |---------------------|           +-----------------+
@@ -176,7 +99,7 @@ For any queries or support, please contact:
           v
 +--------------------+
 | Watchlist_Coins    |
-|--------------------+
+|--------------------|
 | watchlist_id       |
 | coin_id            |
 +--------------------+
@@ -275,4 +198,83 @@ For any queries or support, please contact:
 | verification_type   |
 | send_to             |
 +---------------------+
+```
 
+## Getting Started
+
+### Prerequisites
+- **Java Development Kit (JDK)**
+- **Node.js and npm**
+- **MySQL Server**
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/crypto-trading-platform.git
+   ```
+
+2. **Backend Setup:**
+   - Navigate to the backend directory:
+     ```bash
+     cd backend
+     ```
+   - Configure MySQL database in `application.properties`:
+     ```properties
+     spring.datasource.url=jdbc:mysql://localhost:3306/crypto_db
+     spring.datasource.username=root
+     spring.datasource.password=yourpassword
+     ```
+   - Build and run the backend:
+     ```bash
+     ./mvnw spring-boot:run
+     ```
+
+3. **Frontend Setup:**
+   - Navigate to the frontend directory:
+     ```bash
+     cd frontend
+     ```
+   - Install dependencies:
+     ```bash
+     npm install
+     ```
+   - Start the frontend:
+     ```bash
+     npm start
+     ```
+
+### Usage
+
+- **Access the platform:** Open your browser and navigate to `http://localhost:3000`.
+- **Register/Login:** Create a new account or log in with existing credentials.
+- **Explore Features:** Use the AI Chat Bot, buy and sell cryptocurrencies, manage your portfolio, and utilize advanced wallet functionalities.
+
+## Contributing
+
+We welcome contributions to enhance the platform. Please follow these steps to contribute:
+
+1. **Fork the repository.**
+2. **Create a new branch:**
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. **Make your changes and commit them:**
+   ```bash
+   git commit -m "Add your message"
+   ```
+4. **Push to the branch:**
+   ```bash
+   git push origin feature/your-feature
+   ```
+5. **Create a pull request.**
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any queries or support, please contact:
+
+- **Email:** mukesh.mmp1234@gmail.com
